@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A74A15822DB092D0003DD87 /* SNMPLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A74A14E22DB092D0003DD87 /* SNMPLite.framework */; };
+		2A74A15D22DB092D0003DD87 /* SNMPLiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A74A15C22DB092D0003DD87 /* SNMPLiteTests.m */; };
+		2A74A17A22DB093E0003DD87 /* SNMPMsg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A74A16822DB093D0003DD87 /* SNMPMsg.cpp */; };
+		2A74A17E22DB093E0003DD87 /* SNMPFieldVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A74A16C22DB093D0003DD87 /* SNMPFieldVersion.cpp */; };
+		2A74A18022DB093E0003DD87 /* SNMPOID.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A74A16E22DB093D0003DD87 /* SNMPOID.cpp */; };
+		2A74A18522DB093E0003DD87 /* util.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A74A17322DB093D0003DD87 /* util.cpp */; };
+		2A74A18622DB093E0003DD87 /* SNMPFieldVarbind.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A74A17422DB093D0003DD87 /* SNMPFieldVarbind.cpp */; };
+		2A74A18822DB093E0003DD87 /* SNMPPDU.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A74A17622DB093D0003DD87 /* SNMPPDU.cpp */; };
+		2A74A18A22DB093E0003DD87 /* SNMPLiteManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2A74A17822DB093E0003DD87 /* SNMPLiteManager.mm */; };
+		2A74A18B22DB093E0003DD87 /* SNMPFieldValue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2A74A17922DB093E0003DD87 /* SNMPFieldValue.cpp */; };
+		2A74A1E422DB0F3C0003DD87 /* SNMPLite.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A74A15122DB092D0003DD87 /* SNMPLite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A74A1E522DB0F680003DD87 /* SNMPLiteManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A74A17022DB093D0003DD87 /* SNMPLiteManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A74A1F922DB117D0003DD87 /* DataType.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A74A16D22DB093D0003DD87 /* DataType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2A74A15922DB092D0003DD87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2A74A14522DB092D0003DD87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A74A14D22DB092D0003DD87;
+			remoteInfo = SNMPLite;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A74A14E22DB092D0003DD87 /* SNMPLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SNMPLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A74A15122DB092D0003DD87 /* SNMPLite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SNMPLite.h; sourceTree = "<group>"; };
+		2A74A15222DB092D0003DD87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A74A15722DB092D0003DD87 /* SNMPLiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SNMPLiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A74A15C22DB092D0003DD87 /* SNMPLiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SNMPLiteTests.m; sourceTree = "<group>"; };
+		2A74A15E22DB092D0003DD87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A74A16822DB093D0003DD87 /* SNMPMsg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SNMPMsg.cpp; sourceTree = "<group>"; };
+		2A74A16922DB093D0003DD87 /* SNMPOID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNMPOID.h; sourceTree = "<group>"; };
+		2A74A16A22DB093D0003DD87 /* SNMPVersions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNMPVersions.h; sourceTree = "<group>"; };
+		2A74A16B22DB093D0003DD87 /* SNMPMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNMPMsg.h; sourceTree = "<group>"; };
+		2A74A16C22DB093D0003DD87 /* SNMPFieldVersion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SNMPFieldVersion.cpp; sourceTree = "<group>"; };
+		2A74A16D22DB093D0003DD87 /* DataType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataType.h; sourceTree = "<group>"; };
+		2A74A16E22DB093D0003DD87 /* SNMPOID.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SNMPOID.cpp; sourceTree = "<group>"; };
+		2A74A16F22DB093D0003DD87 /* SNMPFieldValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNMPFieldValue.h; sourceTree = "<group>"; };
+		2A74A17022DB093D0003DD87 /* SNMPLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNMPLiteManager.h; sourceTree = "<group>"; };
+		2A74A17122DB093D0003DD87 /* SNMPPDU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNMPPDU.h; sourceTree = "<group>"; };
+		2A74A17222DB093D0003DD87 /* util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = util.h; sourceTree = "<group>"; };
+		2A74A17322DB093D0003DD87 /* util.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = util.cpp; sourceTree = "<group>"; };
+		2A74A17422DB093D0003DD87 /* SNMPFieldVarbind.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SNMPFieldVarbind.cpp; sourceTree = "<group>"; };
+		2A74A17522DB093D0003DD87 /* SNMPFieldVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNMPFieldVersion.h; sourceTree = "<group>"; };
+		2A74A17622DB093D0003DD87 /* SNMPPDU.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SNMPPDU.cpp; sourceTree = "<group>"; };
+		2A74A17722DB093E0003DD87 /* SNMPFieldVarbind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNMPFieldVarbind.h; sourceTree = "<group>"; };
+		2A74A17822DB093E0003DD87 /* SNMPLiteManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SNMPLiteManager.mm; sourceTree = "<group>"; };
+		2A74A17922DB093E0003DD87 /* SNMPFieldValue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SNMPFieldValue.cpp; sourceTree = "<group>"; };
+		2A74A1E622DB0F8A0003DD87 /* modules.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = modules.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A74A14B22DB092D0003DD87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A74A15422DB092D0003DD87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A74A15822DB092D0003DD87 /* SNMPLite.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A74A14422DB092D0003DD87 = {
+			isa = PBXGroup;
+			children = (
+				2A74A15022DB092D0003DD87 /* SNMPLite */,
+				2A74A15B22DB092D0003DD87 /* SNMPLiteTests */,
+				2A74A14F22DB092D0003DD87 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2A74A14F22DB092D0003DD87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2A74A14E22DB092D0003DD87 /* SNMPLite.framework */,
+				2A74A15722DB092D0003DD87 /* SNMPLiteTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2A74A15022DB092D0003DD87 /* SNMPLite */ = {
+			isa = PBXGroup;
+			children = (
+				2A74A22522DB198F0003DD87 /* public */,
+				2A74A18C22DB09520003DD87 /* Supporting File */,
+				2A74A1E622DB0F8A0003DD87 /* modules.h */,
+				2A74A17922DB093E0003DD87 /* SNMPFieldValue.cpp */,
+				2A74A16F22DB093D0003DD87 /* SNMPFieldValue.h */,
+				2A74A17422DB093D0003DD87 /* SNMPFieldVarbind.cpp */,
+				2A74A17722DB093E0003DD87 /* SNMPFieldVarbind.h */,
+				2A74A16C22DB093D0003DD87 /* SNMPFieldVersion.cpp */,
+				2A74A17522DB093D0003DD87 /* SNMPFieldVersion.h */,
+				2A74A17822DB093E0003DD87 /* SNMPLiteManager.mm */,
+				2A74A16822DB093D0003DD87 /* SNMPMsg.cpp */,
+				2A74A16B22DB093D0003DD87 /* SNMPMsg.h */,
+				2A74A16E22DB093D0003DD87 /* SNMPOID.cpp */,
+				2A74A16922DB093D0003DD87 /* SNMPOID.h */,
+				2A74A17622DB093D0003DD87 /* SNMPPDU.cpp */,
+				2A74A17122DB093D0003DD87 /* SNMPPDU.h */,
+				2A74A16A22DB093D0003DD87 /* SNMPVersions.h */,
+				2A74A17322DB093D0003DD87 /* util.cpp */,
+				2A74A17222DB093D0003DD87 /* util.h */,
+			);
+			path = SNMPLite;
+			sourceTree = "<group>";
+		};
+		2A74A15B22DB092D0003DD87 /* SNMPLiteTests */ = {
+			isa = PBXGroup;
+			children = (
+				2A74A15C22DB092D0003DD87 /* SNMPLiteTests.m */,
+				2A74A15E22DB092D0003DD87 /* Info.plist */,
+			);
+			path = SNMPLiteTests;
+			sourceTree = "<group>";
+		};
+		2A74A18C22DB09520003DD87 /* Supporting File */ = {
+			isa = PBXGroup;
+			children = (
+				2A74A15222DB092D0003DD87 /* Info.plist */,
+			);
+			path = "Supporting File";
+			sourceTree = "<group>";
+		};
+		2A74A22522DB198F0003DD87 /* public */ = {
+			isa = PBXGroup;
+			children = (
+				2A74A16D22DB093D0003DD87 /* DataType.h */,
+				2A74A17022DB093D0003DD87 /* SNMPLiteManager.h */,
+				2A74A15122DB092D0003DD87 /* SNMPLite.h */,
+			);
+			path = public;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2A74A14922DB092D0003DD87 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A74A1E522DB0F680003DD87 /* SNMPLiteManager.h in Headers */,
+				2A74A1F922DB117D0003DD87 /* DataType.h in Headers */,
+				2A74A1E422DB0F3C0003DD87 /* SNMPLite.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2A74A14D22DB092D0003DD87 /* SNMPLite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A74A16222DB092D0003DD87 /* Build configuration list for PBXNativeTarget "SNMPLite" */;
+			buildPhases = (
+				2A74A14922DB092D0003DD87 /* Headers */,
+				2A74A14A22DB092D0003DD87 /* Sources */,
+				2A74A14B22DB092D0003DD87 /* Frameworks */,
+				2A74A14C22DB092D0003DD87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SNMPLite;
+			productName = SNMPLite;
+			productReference = 2A74A14E22DB092D0003DD87 /* SNMPLite.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2A74A15622DB092D0003DD87 /* SNMPLiteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A74A16522DB092D0003DD87 /* Build configuration list for PBXNativeTarget "SNMPLiteTests" */;
+			buildPhases = (
+				2A74A15322DB092D0003DD87 /* Sources */,
+				2A74A15422DB092D0003DD87 /* Frameworks */,
+				2A74A15522DB092D0003DD87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2A74A15A22DB092D0003DD87 /* PBXTargetDependency */,
+			);
+			name = SNMPLiteTests;
+			productName = SNMPLiteTests;
+			productReference = 2A74A15722DB092D0003DD87 /* SNMPLiteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2A74A14522DB092D0003DD87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = thanhvu;
+				TargetAttributes = {
+					2A74A14D22DB092D0003DD87 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					2A74A15622DB092D0003DD87 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 2A74A14822DB092D0003DD87 /* Build configuration list for PBXProject "SNMPLite" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2A74A14422DB092D0003DD87;
+			productRefGroup = 2A74A14F22DB092D0003DD87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A74A14D22DB092D0003DD87 /* SNMPLite */,
+				2A74A15622DB092D0003DD87 /* SNMPLiteTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2A74A14C22DB092D0003DD87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A74A15522DB092D0003DD87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2A74A14A22DB092D0003DD87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A74A18622DB093E0003DD87 /* SNMPFieldVarbind.cpp in Sources */,
+				2A74A17A22DB093E0003DD87 /* SNMPMsg.cpp in Sources */,
+				2A74A18B22DB093E0003DD87 /* SNMPFieldValue.cpp in Sources */,
+				2A74A17E22DB093E0003DD87 /* SNMPFieldVersion.cpp in Sources */,
+				2A74A18022DB093E0003DD87 /* SNMPOID.cpp in Sources */,
+				2A74A18522DB093E0003DD87 /* util.cpp in Sources */,
+				2A74A18A22DB093E0003DD87 /* SNMPLiteManager.mm in Sources */,
+				2A74A18822DB093E0003DD87 /* SNMPPDU.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2A74A15322DB092D0003DD87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A74A15D22DB092D0003DD87 /* SNMPLiteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2A74A15A22DB092D0003DD87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2A74A14D22DB092D0003DD87 /* SNMPLite */;
+			targetProxy = 2A74A15922DB092D0003DD87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2A74A16022DB092D0003DD87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2A74A16122DB092D0003DD87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2A74A16322DB092D0003DD87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "SNMPLite/Supporting File/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thanhdev.SNMPLite;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A74A16422DB092D0003DD87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "SNMPLite/Supporting File/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thanhdev.SNMPLite;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2A74A16622DB092D0003DD87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SNMPLiteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thanhdev.SNMPLiteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2A74A16722DB092D0003DD87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SNMPLiteTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.thanhdev.SNMPLiteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A74A14822DB092D0003DD87 /* Build configuration list for PBXProject "SNMPLite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A74A16022DB092D0003DD87 /* Debug */,
+				2A74A16122DB092D0003DD87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A74A16222DB092D0003DD87 /* Build configuration list for PBXNativeTarget "SNMPLite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A74A16322DB092D0003DD87 /* Debug */,
+				2A74A16422DB092D0003DD87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2A74A16522DB092D0003DD87 /* Build configuration list for PBXNativeTarget "SNMPLiteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A74A16622DB092D0003DD87 /* Debug */,
+				2A74A16722DB092D0003DD87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2A74A14522DB092D0003DD87 /* Project object */;
+}
