@@ -8,6 +8,9 @@
 
 #include "SNMPFieldValue.h"
 #include <string>
+#include <string.h>
+
+using namespace std;
 
 SNMPFieldValue::SNMPFieldValue(u_int8_t *raw, int packageLength)
 {
@@ -30,6 +33,42 @@ u_int8_t * SNMPFieldValue::rawValuePtr(int &length)
 
 char * SNMPFieldValue::printableValue()
 {
+    if (this->type == SNMPDataTypeOctetString || this->type == SNMPDataTypeSequence)
+    {
+        char *s = (char *)malloc(this->dataLength + 1);
+        memcpy(s, this->data, this->dataLength);
+        s[this->dataLength] = '\0';
+        
+        return s;
+    }
+    
+    if (this->type == SNMPDataTypeInteger)
+    {
+        int number = this->data[0];
+        string s = std::to_string(number);
+        
+        return (char *)copyToHeap((u_int8_t *)s.c_str(), (int)s.length());
+    }
+    
+    if (this->type == SNMPDataTypeIPAddress && this->dataLength == 4)
+    {
+        string ip = "";
+        u_int8_t oct1 = this->data[0];
+        u_int8_t oct2 = this->data[1];
+        u_int8_t oct3 = this->data[2];
+        u_int8_t oct4 = this->data[3];
+        
+        ip+=to_string(oct1);
+        ip+=".";
+        ip+=to_string(oct2);
+        ip+=".";
+        ip+=to_string(oct3);
+        ip+=".";
+        ip+=to_string(oct4);
+        
+        return (char *)copyToHeap((u_int8_t *)ip.c_str(), (int)ip.length());
+    }
+    
     char *s = (char *)malloc(this->dataLength + 1);
     memcpy(s, this->data, this->dataLength);
     s[this->dataLength] = '\0';

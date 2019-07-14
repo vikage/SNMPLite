@@ -21,7 +21,7 @@ void SNMPCallbackHandler(SNMPMsg *request, SNMPMsg *response)
             for (vector<SNMPFieldVarbind>::iterator i = response->pdu->varbinds.begin(); i != response->pdu->varbinds.end(); i++)
             {
                 SNMPFieldVarbind varbind = *i;
-                if (!i->isValid)
+                if (!varbind.isValid)
                 {
                     continue;
                 }

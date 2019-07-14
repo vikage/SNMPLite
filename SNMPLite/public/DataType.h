@@ -21,6 +21,7 @@ typedef enum : u_int8_t
     SNMPDataTypeSetRequest = 0xa3,
     SNMPDataTypeNoSuchObject = 0x80,
     SNMPDataTypeNoSuchInstance = 0x81,
+    SNMPDataTypeIPAddress = 0x40
     
 } SNMPDataType;
 
