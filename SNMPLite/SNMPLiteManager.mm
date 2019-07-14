@@ -69,7 +69,7 @@ void SNMPCallbackHandler(SNMPMsg *request, SNMPMsg *response)
 
 -(void)getOid:(NSString *)oidString address:(NSString *)address retry:(int)retry timeout:(int)timeout completeHandler:(SNMPLiteManagerGetCompleteHandler)completeHandler
 {
-    SNMPOID *oid = new SNMPOID("1.3.6.1.2.1.25.3.2.1.3.1");
+    SNMPOID *oid = new SNMPOID(oidString.UTF8String);
     SNMPFieldValue *value = new SNMPFieldValue(SNMPDataTypeNULL, NULL, 0);
     SNMPFieldVarbind *varbind = new SNMPFieldVarbind(oid, value);
     
