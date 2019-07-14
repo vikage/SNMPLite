@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'SNMPLite'
-  s.version  = '1.0.3'
+  s.version  = '1.0.4'
   s.ios.deployment_target = '9'
   s.license  =  { :type => 'MIT', :file => 'LICENSE' }
   s.summary  = 'SNMP library to get SNMP oid'

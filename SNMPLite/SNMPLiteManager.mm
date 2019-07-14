@@ -16,16 +16,29 @@ void SNMPCallbackHandler(SNMPMsg *request, SNMPMsg *response)
     if (completeHandler)
     {
         NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
-        for (vector<SNMPFieldVarbind>::iterator i = response->pdu->varbinds.begin(); i != response->pdu->varbinds.end(); i++)
+        if (response != NULL && response->pdu != NULL && response->isValid && response->pdu->isValid)
         {
-            SNMPFieldVarbind varbind = *i;
-            SNMPOID *oid = varbind.oid;
-            SNMPFieldValue *value = varbind.value;
-            
-            NSString *oidValue = [NSString stringWithUTF8String:oid->oidValue.c_str()];
-            NSString *valueString = [NSString stringWithUTF8String:value->printableValue()];
-            
-            [result setObject:valueString forKey:oidValue];
+            for (vector<SNMPFieldVarbind>::iterator i = response->pdu->varbinds.begin(); i != response->pdu->varbinds.end(); i++)
+            {
+                SNMPFieldVarbind varbind = *i;
+                if (!i->isValid)
+                {
+                    continue;
+                }
+                
+                SNMPOID *oid = varbind.oid;
+                SNMPFieldValue *value = varbind.value;
+                
+                if (!oid->isValid)
+                {
+                    continue;
+                }
+                
+                NSString *oidValue = [NSString stringWithUTF8String:oid->oidValue.c_str()];
+                NSString *valueString = [NSString stringWithUTF8String:value->printableValue()];
+                
+                [result setObject:valueString forKey:oidValue];
+            }
         }
         
         completeHandler(result);

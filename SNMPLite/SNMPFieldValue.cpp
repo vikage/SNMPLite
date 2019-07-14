@@ -14,6 +14,7 @@ SNMPFieldValue::SNMPFieldValue(u_int8_t *raw, int packageLength)
     this->type = (SNMPDataType)raw[kDataTypeIndex];
     this->dataLength = raw[kLengthIndex];
     this->data = (u_int8_t *)malloc(this->dataLength);
+    memcpy(this->data, raw+kBodyIndex, this->dataLength);
 }
 
 u_int8_t * SNMPFieldValue::rawValuePtr(int &length)

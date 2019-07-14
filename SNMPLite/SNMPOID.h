@@ -16,7 +16,7 @@ using namespace std;
 class SNMPOID {
 public:
     string oidValue;
-    bool isValid;
+    bool isValid = true;
     
     SNMPOID(string oid)
     {
