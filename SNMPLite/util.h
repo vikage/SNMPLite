@@ -13,5 +13,7 @@
 extern u_int8_t* copyToHeap(u_int8_t *src, int length);
 
 void print_array(u_int8_t *array, int length);
+u_int8_t *encodeNumber(int number, int &length);
+int decodeNumber(u_int8_t *raw, int &usedLength);
 
 #endif

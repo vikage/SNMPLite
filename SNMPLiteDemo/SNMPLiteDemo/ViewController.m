@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[SNMPLiteManager shared] getOid:@"1.3.6.1.2.1.25.3.2.1.3.1" address:@"192.168.100.36" retry:3 timeout:1000 completeHandler:^(NSDictionary *result) {
+    [[SNMPLiteManager shared] getOid:@"1.3.6.1.2.1.4.24.4.1.16.0.0.0.0.0.0.0.0.0.195.218.254.97" address:@"104.236.166.95" retry:3 timeout:1000 completeHandler:^(NSDictionary *result) {
         
     }];
     // Do any additional setup after loading the view.

@@ -59,11 +59,14 @@ SNMPOID::SNMPOID(u_int8_t *raw, int packageLength)
     this->oidValue += "1.3";
     index++;
     
-    for (;index < oidBodyLength; index++)
+    while (index < oidBodyLength)
     {
-        u_int8_t val = oidRaw[index];
+        int usedLength;
+        int number = decodeNumber(oidRaw+index, usedLength);
+        index+=usedLength;
+        
         this->oidValue += '.';
-        this->oidValue += to_string(val);
+        this->oidValue += to_string(number);
     }
     
     free(oidRaw);
@@ -88,14 +91,18 @@ u_int8_t * SNMPOID::rawValuePtr(int &length)
         string val = *it;
         int integerValue = stoi(val);
         
-        buffer[index++] = integerValue;
+        int numberEncodedLength;
+        u_int8_t *numberRaw = encodeNumber(integerValue, numberEncodedLength);
+        memcpy(buffer+index, numberRaw, numberEncodedLength);
+        free(numberRaw);
+        index+=numberEncodedLength;
     }
     
     u_int8_t *raw = (u_int8_t *)malloc(index);
     memcpy(raw, buffer, index);
     length = index;
     
-    buffer[1] = length - 2;
+    buffer[kLengthIndex] = length - 2;
     
     return copyToHeap(buffer, length);
 }
