@@ -18,16 +18,16 @@ void SNMPCallbackHandler(SNMPMsg *request, SNMPMsg *response)
         NSMutableDictionary *result = [[NSMutableDictionary alloc] init];
         if (response != NULL && response->pdu != NULL && response->isValid && response->pdu->isValid)
         {
-            for (vector<SNMPFieldVarbind>::iterator i = response->pdu->varbinds.begin(); i != response->pdu->varbinds.end(); i++)
+            for (vector<SNMPFieldVarbind*>::iterator i = response->pdu->varbinds.begin(); i != response->pdu->varbinds.end(); i++)
             {
-                SNMPFieldVarbind varbind = *i;
-                if (!varbind.isValid)
+                SNMPFieldVarbind *varbind = *i;
+                if (!varbind->isValid)
                 {
                     continue;
                 }
                 
-                SNMPOID *oid = varbind.oid;
-                SNMPFieldValue *value = varbind.value;
+                SNMPOID *oid = varbind->oid;
+                SNMPFieldValue *value = varbind->value;
                 
                 if (!oid->isValid)
                 {
@@ -42,6 +42,9 @@ void SNMPCallbackHandler(SNMPMsg *request, SNMPMsg *response)
         }
         
         completeHandler(result);
+        [[SNMPLiteManager shared] removeCompleteHandlerForRequestId:request->pdu->requestId];
+        delete response;
+        delete request;
     }
 }
 
@@ -86,8 +89,8 @@ void SNMPCallbackHandler(SNMPMsg *request, SNMPMsg *response)
     SNMPFieldValue *value = new SNMPFieldValue(SNMPDataTypeNULL, NULL, 0);
     SNMPFieldVarbind *varbind = new SNMPFieldVarbind(oid, value);
     
-    vector<SNMPFieldVarbind> varbinds;
-    varbinds.push_back(*varbind);
+    vector<SNMPFieldVarbind *> varbinds;
+    varbinds.push_back(varbind);
     
     SNMPPDU *pdu = new SNMPPDU(SNMPDataTypeGetRequest, varbinds);
     SNMPMsg *msg = new SNMPMsg(SNMPVersionV2, pdu);

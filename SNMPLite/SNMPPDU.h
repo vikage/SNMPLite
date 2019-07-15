@@ -20,9 +20,10 @@ public:
     u_int8_t errorIndex = 0;
     
     SNMPDataType dataType;
-    vector<SNMPFieldVarbind> varbinds;
+    vector<SNMPFieldVarbind*> varbinds;
     bool isValid = true;
-    SNMPPDU(SNMPDataType type, vector<SNMPFieldVarbind> varbinds)
+    
+    SNMPPDU(SNMPDataType type, vector<SNMPFieldVarbind*> varbinds)
     {
         this->dataType = type;
         this->varbinds = varbinds;
@@ -30,7 +31,7 @@ public:
     }
     
     SNMPPDU(u_int8_t *raw, int rawLength);
-    
+    ~SNMPPDU();
     void changeRequestId();
     u_int8_t * rawValuePtr(int &length);
 };

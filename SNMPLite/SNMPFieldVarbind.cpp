@@ -45,6 +45,12 @@ SNMPFieldVarbind::SNMPFieldVarbind(u_int8_t *raw, int packageLength)
     free(varbindRaw);
 }
 
+SNMPFieldVarbind::~SNMPFieldVarbind()
+{
+    delete oid;
+    delete value;
+}
+
 u_int8_t * SNMPFieldVarbind::rawValuePtr(int &length)
 {
     u_int8_t buffer[1000];

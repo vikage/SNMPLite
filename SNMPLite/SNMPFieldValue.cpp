@@ -20,6 +20,12 @@ SNMPFieldValue::SNMPFieldValue(u_int8_t *raw, int packageLength)
     memcpy(this->data, raw+kBodyIndex, this->dataLength);
 }
 
+SNMPFieldValue::~SNMPFieldValue()
+{
+    delete data;
+    this->dataLength = 0;
+}
+
 u_int8_t * SNMPFieldValue::rawValuePtr(int &length)
 {
     u_int8_t buffer[1000];

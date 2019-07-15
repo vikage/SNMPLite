@@ -22,9 +22,11 @@ public:
     
     SNMPFieldVarbind(SNMPOID *oid, SNMPFieldValue *value)
     {
+        printf("Varbind alloc %p\n", this);
         this->oid = oid;
         this->value = value;
     }
+    ~SNMPFieldVarbind();
     
     SNMPFieldVarbind(u_int8_t *raw, int packageLength);
     u_int8_t * rawValuePtr(int &length);

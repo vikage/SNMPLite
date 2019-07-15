@@ -26,6 +26,7 @@ public:
     }
     
     SNMPFieldValue(u_int8_t *raw, int packageLength);
+    ~SNMPFieldValue();
     u_int8_t * rawValuePtr(int &length);
     char * printableValue();
 };

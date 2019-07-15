@@ -68,6 +68,12 @@ SNMPMsg::SNMPMsg(u_int8_t *raw, int packageLength)
     free(bodyRaw);
 }
 
+SNMPMsg::~SNMPMsg()
+{
+    delete version;
+    delete pdu;
+}
+
 u_int8_t* SNMPMsg::rawValuePtr(int &length)
 {
     u_int8_t buffer[1000];
@@ -155,6 +161,8 @@ u_int8_t * SNMPMsg::doSend(char* server, int &receivedLength, int timeout)
         printf("error");
         exit(2);
     }
+    
+    free(package);
     
     socklen_t len;
     int timoutSecond = timeout/1000;

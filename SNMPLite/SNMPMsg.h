@@ -21,6 +21,7 @@ public:
     string community = "public";
     SNMPPDU *pdu;
     bool isValid = true;
+    
     SNMPMsg(SNMPVersion version, SNMPPDU *pdu)
     {
         this->version = new SNMPFieldVersion(version);
@@ -28,9 +29,9 @@ public:
     }
     
     SNMPMsg(u_int8_t *raw, int packageLength);
+    ~SNMPMsg();
     
     u_int8_t * rawValuePtr(int &length);
-    
     void send(char* server, int maxTry, int timeout, SNMPCallback callback);
 
 private:

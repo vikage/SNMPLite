@@ -83,13 +83,20 @@ SNMPPDU::SNMPPDU(u_int8_t *raw, int rawLength)
         memcpy(varbindRaw, varbindsRaw, varbindRawLength);
         varbindsIndex+=varbindRawLength;
         
-        SNMPFieldVarbind varbind(varbindRaw, varbindRawLength);
+        SNMPFieldVarbind *varbind = new SNMPFieldVarbind(varbindRaw, varbindRawLength);
         this->varbinds.push_back(varbind);
         free(varbindRaw);
     }
     
     free(varbindsRaw);
     free(pduBodyRaw);
+}
+
+SNMPPDU::~SNMPPDU()
+{
+    for ( auto varbind : varbinds )
+        delete varbind;
+    varbinds.clear();
 }
 
 u_int8_t * SNMPPDU::rawValuePtr(int &length)
@@ -123,11 +130,11 @@ u_int8_t * SNMPPDU::rawValuePtr(int &length)
     currentIndex++; // Increase index for length
     
     int varbindsLength = 0;
-    for (vector<SNMPFieldVarbind>::iterator i = this->varbinds.begin(); i != this->varbinds.end(); i++)
+    for (vector<SNMPFieldVarbind *>::iterator i = this->varbinds.begin(); i != this->varbinds.end(); i++)
     {
-        SNMPFieldVarbind varbind = *i;
+        SNMPFieldVarbind *varbind = *i;
         int varbindRawLength = 0;
-        u_int8_t *raw = varbind.rawValuePtr(varbindRawLength);
+        u_int8_t *raw = varbind->rawValuePtr(varbindRawLength);
         
         memcpy(buffer+currentIndex, raw, varbindRawLength);
         varbindsLength+=varbindRawLength;
